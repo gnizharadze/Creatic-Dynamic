@@ -443,6 +443,10 @@ hr {
   .picture-slide {
     flex-direction: column;
   }
+
+  .what-they-say {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 1100px) {
@@ -464,6 +468,10 @@ hr {
 
   .picture-slide img {
     width: 80%;
+  }
+
+  .why-main {
+    flex-direction: column;
   }
 }
 

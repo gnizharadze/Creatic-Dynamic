@@ -140,7 +140,7 @@ function setWhy($whyUs, $reasons){
 function setClient($clientSay){
   echo '<section class="say">';
     echo '<div class="what-they-say">';
-      echo '<img src='.$clientSay['image1'].' alt="half1">';
+      echo '<img class="side-image image-left" src='.$clientSay['image1'].' alt="half1">';
         echo '<div class="clients-say">';
           echo '<div class="client-content">';
             echo '<div class="first-box">';
@@ -164,7 +164,7 @@ function setClient($clientSay){
            echo '<a class="button" href='.$clientSay['url'].'>'.$clientSay['button'].'</a>';
           echo '</div>';
         echo  '</div>';
-      echo '<img src='.$clientSay['image2'].' alt="half2">';
+      echo '<img "side-image image-right" src='.$clientSay['image2'].' alt="half2">';
     echo '</div>';
   echo'</section>';
 }
