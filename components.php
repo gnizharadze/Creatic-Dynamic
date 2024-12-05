@@ -3,6 +3,92 @@
 include('data.php');
 
 
+// header  
+function setHeader($headerData){
+
+  echo '<header>';
+    echo '<div class="header">';
+
+        echo '<div class="logo">';
+          echo '<a href="#"><img src="./Image/LOGO.png" alt=""></a>';
+        echo '</div>';
+
+        echo '<div class="nav">';
+           echo '<ul type="none">';
+              foreach($headerData as $data){
+                echo '<li><a href="'.$data['link'].'">'. $data['page'] .'</a></li>';
+              };
+              echo '<a href="#"><img src="./Image/magnify.png" alt=""></a>';
+           echo ' </ul>';
+        echo '</div>';
+
+    echo '</div>';
+  echo '</header>';
+}
+
+
+
+
+// section 1 
+
+function firstSection(){
+  echo '<section>
+        <div class="first_section">
+            <div class="texts">
+                <p id="p1">WELCOME TO CREATIC</p>
+                <h2 class="welcome-h2">WE ARE <span>CREATIVE</span> DESIGN AGENCY</h2>
+                <div class="line"></div>
+                <p>Lorem ipsumNeque porro quisquam est qui dolorem ipsum 
+                    quia dolor sit amet, consectetur, adipisci velit Neque 
+                    porro elit Neque porro quis ipsum</p> 
+                <a href="#">GET IN TOUCH</a>
+            </div>
+        </div>
+    </section>';
+};
+
+
+// footer 
+
+function setFooter(){
+  echo '<footer>
+        <div class="footer">
+            <div class="logo">
+                <a href="#"><img src="./Image/LOGO.png" alt=""></a>
+            </div>
+            <div class="line1"></div>
+            <div class="footer_menu">
+                <ul type="none">
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer_text">
+                <p>Lorem ipsum Neque porro quisquam est qui do lorem 
+                    ipsum quia dolor sit amet, 
+                     Neque porro elit NeDque </p>
+            </div>
+            <div class="soc_media">
+                <ul type="none">
+                    <li><a href="#"><img src="./Image/facebook.png" alt=""></a></li>
+                    <li><a href="#"><img src="./Image/instagram.png" alt=""></a></li>
+                    <li><a href="#"><img src="./Image/whatsapp.png" alt=""></a></li>
+                    <li><a href="#"><img src="./Image/linkdin.png" alt=""></a></li>
+                    <li><a href="#"><img src="./Image/pinterest.png" alt=""></a></li>
+                    <li><a href="#"><img src="./Image/twitter.png" alt=""></a></li>
+                </ul>
+            </div>
+            <p class="footerbottom">Copyright © 2003-2023 Creatic Agency All rights reserved.</p>
+        </div>
+    </footer>';
+}
+
+
+
 // Section 5
 function setServices($services, $boxes){
       echo '<section class="section5">';
@@ -164,7 +250,7 @@ function setClient($clientSay){
            echo '<a class="button" href='.$clientSay['url'].'>'.$clientSay['button'].'</a>';
           echo '</div>';
         echo  '</div>';
-      echo '<img "side-image image-right" src='.$clientSay['image2'].' alt="half2">';
+      echo '<img class="side-image image-right" src='.$clientSay['image2'].' alt="half2">';
     echo '</div>';
   echo'</section>';
 }

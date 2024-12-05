@@ -20,10 +20,20 @@
     <script src="js/carousel.js" defer></script>
   </head>
   <body>
+
+    <!-- Header -->
+      <?php 
+        setHeader($headerData);
+      ?>
     <!-- Section 7 -->
       <?php
         setWork($ourWork, $slidePic);
       ?>
+
+      <!-- Footer -->
+        <?php
+          setFooter();
+        ?>
   </body>
 </html>
  

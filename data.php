@@ -1,4 +1,34 @@
 <?php
+
+
+$headerData = [
+    [
+        'page' => 'Home',
+        'link' => 'index.php'
+    ],
+    [
+        'page' => 'About Us',
+        'link' => 'about-us.php'
+    ],
+    [
+        'page' => 'Services',
+        'link' => 'services.php'
+    ],
+    [
+        'page' => 'Portfolio',
+        'link' => 'portfolio.php'
+    ],
+    [
+        'page' => 'Pages',
+        'link' => 'pages.php'
+    ],
+    [
+        'page' => 'Contact Us',
+        'link' => 'contact-us.php'
+    ],
+];
+
+
 // Section 5
 $services = [
     'topic' => 'OUR SERVICES',

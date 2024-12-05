@@ -20,6 +20,12 @@
     <script src="js/carousel.js" defer></script>
   </head>
   <body>
+
+    <!-- Header -->
+      <?php 
+        setHeader($headerData);
+      ?>
+      
     <!-- Section 5 -->
      <?php
       setServices($services, $boxes);
@@ -28,6 +34,11 @@
      
       setBlocks($blocks);
      ?>
+
+     <!-- Footer -->
+     <?php
+        setFooter();
+      ?>
   </body>
 </html>
  

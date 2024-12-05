@@ -16,10 +16,22 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=IBM+Plex+Mono&family=Montserrat:ital@0;1&family=Poppins:wght@300;400;500;600;700;800&family=Raleway:ital@0;1&family=Roboto&family=Ubuntu&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Creatic Creative Agency</title>
     <script src="js/carousel.js" defer></script>
   </head>
   <body>
+    <!-- header  -->
+     <?php 
+      setHeader($headerData);
+     ?>
+
+
+    <!-- first section  -->
+     <?php 
+      firstSection();
+     ?>
+
     <!-- Section 5 -->
      <?php
       setServices($services, $boxes);
@@ -44,6 +56,11 @@
 
     <?php
       setClient($clientSay);
+    ?>
+
+
+<?php
+      setFooter();
     ?>
         
   </body>

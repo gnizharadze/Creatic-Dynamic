@@ -10,6 +10,118 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   background-color: #000000;
+  font-family: "Poppins", sans-serif;
+}
+
+/* header  */
+
+.header {
+  max-width: 1420px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+}
+
+.nav ul li a {
+  color: white;
+  font-family: "Poppins";
+  font-size: 21px;
+  padding: 10px 18px;
+  transition: 0.2s;
+}
+
+.nav ul li a:hover {
+  color: #6d95fc;
+}
+
+.logo a img {
+  width: 244px;
+  height: 92px;
+}
+
+/* section first 1 */
+
+.first_section {
+  display: flex;
+  background-image: url(./Image/beautiful-woman-with-big-jewel\ 1.png);
+  background-position: calc(100% + 120px) center;
+  background-repeat: no-repeat;
+  background-size: 1000px;
+}
+
+.texts {
+  color: white;
+  margin-top: 178px;
+  width: 819px;
+  height: 524px;
+  margin-left: 217px;
+}
+
+.welcome-h2 {
+  font-family: "Poppins";
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 89.19px;
+  letter-spacing: 0.015em;
+  text-align: left;
+  margin-bottom: 43px;
+}
+
+h2 span {
+  color: #6d95fc;
+}
+
+#p1 {
+  color: #6d95fc;
+  font-family: "Poppins";
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 31.5px;
+  letter-spacing: 0.145em;
+  margin-bottom: 43px;
+}
+
+.line {
+  height: 3px;
+  max-width: 144px;
+  width: 100%;
+  background-color: #6d95fc;
+  border-radius: 5px;
+  margin-bottom: 43px;
+  margin-top: 43px;
+}
+
+.texts p {
+  font-family: "Poppins";
+  font-weight: 21px;
+  max-width: 550px;
+  width: 100%;
+}
+
+.texts a {
+  color: white;
+  font-family: "Poppins";
+  font-size: 17px;
+  padding: 5px 20px;
+  display: inline-block;
+  border: 3px solid #6d95fc;
+  border-radius: 3px;
+  margin-top: 36px;
+  transition: 0.2s;
+}
+
+.texts a:hover {
+  background-color: #6d95fc;
+  color: antiquewhite;
+  border: 3px solid transparent;
 }
 
 /* Section 5 */
@@ -39,7 +151,6 @@ h2 {
   line-height: 31.5px;
   letter-spacing: 0.145em;
   text-align: left;
-  color: #6d95fc;
   margin-bottom: 32px;
 }
 
@@ -181,6 +292,7 @@ hr {
 
 .work-text {
   margin: 0;
+  color: #6d95fc;
 }
 
 .picture-slide {
@@ -200,6 +312,8 @@ hr {
   color: #ffffff;
   display: inline-block;
   padding: 10px;
+  border: 3px solid transparent;
+  transition: 0.2s;
 }
 
 .rectangle a:hover {
@@ -439,13 +553,77 @@ hr {
   color: #6d95fc;
 }
 
+/* footer  */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.line1 {
+  height: 3px;
+  width: 101px;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.footer_menu ul {
+  display: flex;
+  gap: 32px;
+}
+
+.footer_menu ul li a {
+  color: #6d95fc;
+  font-family: "Poppins";
+  font-size: 21px;
+}
+
+.soc_media ul {
+  display: flex;
+  gap: 26px;
+  margin-top: 10px;
+}
+
+.soc_media {
+  margin-bottom: 150px;
+}
+
+.footer_text {
+  font-family: "Poppins";
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 31.5px;
+  letter-spacing: -0.025em;
+  text-align: center;
+  padding: 10px;
+}
+
+.footerbottom {
+  margin-bottom: 81px;
+}
+
 @media screen and (max-width: 1900px) {
   .picture-slide {
     flex-direction: column;
   }
 
   .what-they-say {
-    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .clients-say {
+    order: 1;
+    width: 100%;
+  }
+
+  .side-image {
+    order: 2;
+    width: 50%;
+    height: auto;
   }
 }
 
@@ -470,8 +648,34 @@ hr {
     width: 80%;
   }
 
+  .why-us {
+    justify-content: center;
+    align-items: center;
+  }
+
   .why-main {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .why-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .why-experience {
+    text-align: center;
+  }
+
+  .right-text {
+    width: 700px;
+  }
+
+  .why-right ul {
+    text-align: center;
   }
 }
 

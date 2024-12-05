@@ -21,6 +21,10 @@
   </head>
   <body>
 
+    <!-- Header -->
+      <?php 
+        setHeader($headerData);
+      ?>
     <!-- Section 8 -->
       <?php
         setWhy($whyUs, $reasons);
@@ -30,6 +34,11 @@
 
     <?php
       setClient($clientSay);
+    ?>
+
+    <!-- Footer -->
+    <?php
+      setFooter();
     ?>
         
   </body>
