@@ -16,43 +16,21 @@
       href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&family=IBM+Plex+Mono&family=Montserrat:ital@0;1&family=Poppins:wght@300;400;500;600;700;800&family=Raleway:ital@0;1&family=Roboto&family=Ubuntu&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Creatic Creative Agency</title>
     <script src="js/carousel.js" defer></script>
   </head>
   <body>
-    <!-- header  -->
-     <?php 
-      setHeader($headerData);
 
-// Section 1
-      firstSection();
-
-// Section 2
+    <!-- Header -->
+      <?php 
+        setHeader($headerData);
+        
+    // Section 2
       secondsection($aboutData);
 
-// Section 3
-      setServices($services, $boxes);
-    
-// Section 4
-      setBlocks($blocks);
-
-// Section 5
-        setWork($ourWork, $slidePic);
-
-// Section 6
-        setWhy($whyUs, $reasons);
-
-// Section 7
-      setClient($clientSay);
-
-// Section 8
-      intouch($getInTouch, $infos);
-
-// Footer
-      setFooter();
-    ?>
-        
+    // Footer
+        setFooter();
+      ?>
   </body>
 </html>
  

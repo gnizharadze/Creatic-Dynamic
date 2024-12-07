@@ -1,6 +1,6 @@
 <?php
 
-
+// Header
 $headerData = [
     [
         'page' => 'Home',
@@ -28,8 +28,20 @@ $headerData = [
     ],
 ];
 
+// Section 2
 
-// Section 5
+$aboutData = [
+    'image' => "./Image/aboutimg.png",
+    'gradient' => "./Image/abgrad.png",
+    'about' => 'ABOUT US',
+    'about-title' => 'We Bring <span>Creative</span> Ideas To Life',
+    'create' => 'We Love Creating',
+    'text' => 'Lorem ipsumNeque porro quisquam est qui do lorem ipsum quia dolor sit amet,  Neque porro elit NeDque porro  Lorem ipsum Neque porro Neque porro 
+      <br><br>Neque porro quisquam est qui do lorem ipsum quia dolor sit amet,  Lorem ipsum Neque quis ipsum',
+    'button' => 'READ MORE'
+];
+
+// Section 3
 $services = [
     'topic' => 'OUR SERVICES',
     'title' => 'Experience The Power Of <span>Innovation</span>',
@@ -60,7 +72,7 @@ $boxes = [
     ],
  ];
 
-// Section 6
+// Section 4
 $blocks = [
     [
         'Image' => "./Image/team-member.png",
@@ -85,7 +97,7 @@ $blocks = [
    ];
 
  
-// Section 7
+// Section 5
 $ourWork = [
     'title' => 'ENJOY OUR <span>LATEST</span> PROJECTS',
     'text' => 'OUR WORK'
@@ -98,7 +110,7 @@ $slidePic = [
  ];
 
 
-//  Section 8
+//  Section 6
 $whyUs = [
     'title' => 'WHY US?',
     'experience' => '25 YEARS OF <span>EXPERIENCE</span> AS A CREATIVE AGENCY',
@@ -113,7 +125,7 @@ $reasons = [
     'Modern Technology'
     ];
 
-// Section 9
+// Section 7
 $clientSay = [
     'say' => 'WHAT <span>OUR</span> CLIENTS SAY?',
     'testimonial' => 'TESTIMONIALS',
@@ -126,4 +138,33 @@ $clientSay = [
     'url' => '#',
     'image1' => './Image/half1.png',
     'image2' => './Image/half2.png',
-];
+    ];
+
+// Section 8
+
+$getInTouch = [
+    'touch' => 'GET IN <span>TOUCH</span>',
+    'text' => 'Lorem ipsum Neque porro quisquam est qui do lorem ipsum quia dolor sit
+            amet, Neque porro elit NeDque porro'
+    ];
+
+$infos = [
+    [
+        'class' => 'location',
+        'image' => "./Image/map.png",
+        'description' => 'Office Address',
+        'info' => '98, Arca St, PR City, 33414 , Indonesia'
+    ],
+    [
+        'class' => 'phone',
+        'image' => "./Image/phone.png",
+        'description' => 'Call Us',
+        'info' => '(+BK) 123 456 7891'
+    ],
+    [
+        'class' => 'mailus',
+        'image' => "./Image/mail.png",
+        'description' => 'Mail Us',
+        'info' => 'info@creaticagency.com'
+    ]
+    ];

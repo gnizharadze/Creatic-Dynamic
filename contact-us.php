@@ -25,31 +25,10 @@
      <?php 
       setHeader($headerData);
 
-// Section 1
-      firstSection();
-
-// Section 2
-      secondsection($aboutData);
-
-// Section 3
-      setServices($services, $boxes);
-    
-// Section 4
-      setBlocks($blocks);
-
-// Section 5
-        setWork($ourWork, $slidePic);
-
-// Section 6
-        setWhy($whyUs, $reasons);
-
-// Section 7
-      setClient($clientSay);
-
-// Section 8
+    // Section 8
       intouch($getInTouch, $infos);
 
-// Footer
+    // Footer
       setFooter();
     ?>
         

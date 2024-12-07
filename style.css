@@ -13,7 +13,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* header  */
+/* Header  */
 
 .header {
   max-width: 1420px;
@@ -47,7 +47,7 @@ body {
   height: 92px;
 }
 
-/* section first 1 */
+/* Section 1 */
 
 .first_section {
   display: flex;
@@ -124,7 +124,78 @@ h2 span {
   border: 3px solid transparent;
 }
 
-/* Section 5 */
+/* Section 2 */
+
+.about-us {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1920px;
+  margin: 0 auto;
+  margin-top: 134px;
+}
+
+.aboutpart {
+  display: flex;
+  flex-direction: column;
+  width: 708px;
+}
+
+.gradient {
+  position: relative;
+  right: 170px;
+}
+
+.robot {
+  position: absolute;
+  left: 50px;
+}
+
+.about {
+  font-family: "Poppins";
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 31.5px;
+  letter-spacing: 0.145em;
+  text-align: left;
+  color: #6d95fc;
+  margin-bottom: 26px;
+}
+
+.about-title {
+  width: 614px;
+}
+
+.about-title span {
+  color: #6d95fc;
+}
+
+.aboutpart hr {
+  margin: 26px 0;
+}
+
+.create {
+  font-family: "Poppins";
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25.5px;
+  letter-spacing: 0.005em;
+  color: #6d95fc;
+  margin-bottom: 26px;
+}
+
+.about-text {
+  font-family: "Poppins";
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 34.96px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  margin-bottom: 26px;
+}
+
+/* Section 3 */
 .section5 {
   max-width: 1290px;
   margin: 0 auto;
@@ -134,7 +205,7 @@ h2 span {
   display: flex;
   align-items: center;
   gap: 91px;
-  margin-top: 134px;
+  margin-top: 87px;
   margin-bottom: 145px;
 }
 
@@ -196,6 +267,10 @@ hr {
   width: fit-content;
 }
 
+.button:hover {
+  background-color: #6d95fc;
+}
+
 .boxes {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -240,7 +315,7 @@ hr {
   text-decoration-skip-ink: none;
 }
 
-/* Section 6 */
+/* Section 4 */
 
 .sectionblock {
   max-width: 1920px;
@@ -272,7 +347,7 @@ hr {
   text-align: center;
 }
 
-/* section 7 */
+/* section 5 */
 
 .our-work {
   display: flex;
@@ -280,6 +355,7 @@ hr {
   align-items: center;
   margin: 0 auto;
   max-width: 1920px;
+  margin-top: 150px;
 }
 
 .work-line {
@@ -363,7 +439,7 @@ hr {
   transform: scale(1.3);
 } */
 
-/* Section 8 */
+/* Section 6 */
 
 .why-us {
   max-width: 1396px;
@@ -444,7 +520,7 @@ hr {
   padding-left: 11px;
 }
 
-/* Section 9 */
+/* Section 7 */
 
 .what-they-say {
   display: flex;
@@ -553,7 +629,121 @@ hr {
   color: #6d95fc;
 }
 
-/* footer  */
+/* Section 8 */
+
+.contact-getintouch {
+  display: flex;
+  gap: 147px;
+  max-width: 1282px;
+  margin: 0 auto;
+  margin-top: 134px;
+}
+
+.touchup {
+  font-family: "Poppins";
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 72px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.intouch-hr {
+  margin-bottom: 26px;
+}
+
+.intouch-p {
+  font-family: "Poppins";
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 34.96px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.intouch-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.location,
+.phone,
+.mailus {
+  display: flex;
+  gap: 34px;
+}
+
+.pin {
+  width: 45px;
+  height: 45px;
+}
+
+.office p {
+  color: #6d95fc;
+}
+
+.form-container {
+  background: linear-gradient(
+    179.96deg,
+    #12192b 0.03%,
+    rgba(18, 25, 43, 0) 109.04%
+  );
+  border-radius: 34px;
+  padding: 25px 57px 46px 57px;
+  width: 539px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-family: "Poppins";
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 25.5px;
+  letter-spacing: 0.085em;
+  text-align: left;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: none;
+  border: 1px solid #fff;
+  padding: 10px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+#message {
+  height: 178px;
+  margin-bottom: 32px;
+}
+
+.contact-form button {
+  background: #6d95fc;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  padding: 10px 25px 10px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.contact-form button:hover {
+  background: #357ab8;
+}
+
+/* Footer  */
 .footer {
   display: flex;
   flex-direction: column;
@@ -562,6 +752,7 @@ hr {
   gap: 17px;
   max-width: 740px;
   margin: 0 auto;
+  margin-top: 129px;
 }
 
 .line1 {

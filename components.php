@@ -26,9 +26,6 @@ function setHeader($headerData){
   echo '</header>';
 }
 
-
-
-
 // section 1 
 
 function firstSection(){
@@ -45,11 +42,32 @@ function firstSection(){
             </div>
         </div>
     </section>';
-};
+  };
 
 
 // footer 
 
+// Section 2
+
+
+function secondsection($aboutData){
+  echo '<section class="section2">';
+    echo '<div class="about-us">';
+      echo '<img class="gradient" src='.$aboutData['gradient'].' alt="gradient">';
+      echo '<img class="robot" src='.$aboutData['image'].' alt="About">';
+      echo '<div class="aboutpart">';
+        echo '<h2 class="about">'.$aboutData['about'].'</h2>';
+        echo '<h1 class="about-title">'.$aboutData['about-title'].'</h1>';
+        echo '<hr>';
+        echo '<h3 class="create">'.$aboutData['create'].'</h3>';          
+        echo '<p class="about-text">'.$aboutData['text'].' </p>';
+        echo '<a href="#" class="button">'.$aboutData['button'].'</a>';
+      echo '</div>';
+    echo '</div>';
+  echo '</section>';
+}
+
+// Footer
 function setFooter(){
   echo '<footer>
         <div class="footer">
@@ -77,7 +95,7 @@ function setFooter(){
                     <li><a href="#"><img src="./Image/facebook.png" alt=""></a></li>
                     <li><a href="#"><img src="./Image/instagram.png" alt=""></a></li>
                     <li><a href="#"><img src="./Image/whatsapp.png" alt=""></a></li>
-                    <li><a href="#"><img src="./Image/linkdin.png" alt=""></a></li>
+                    <li><a href="#"><img src="./Image/linkedin.png" alt=""></a></li>
                     <li><a href="#"><img src="./Image/pinterest.png" alt=""></a></li>
                     <li><a href="#"><img src="./Image/twitter.png" alt=""></a></li>
                 </ul>
@@ -85,11 +103,11 @@ function setFooter(){
             <p class="footerbottom">Copyright © 2003-2023 Creatic Agency All rights reserved.</p>
         </div>
     </footer>';
-}
+  }
 
 
 
-// Section 5
+// Section 3
 function setServices($services, $boxes){
       echo '<section class="section5">';
           echo '<div class="services">';
@@ -117,7 +135,7 @@ function setServices($services, $boxes){
       echo '</section>';
     };
 
-// Section 6
+// Section 4
 function setBlocks($blocks){
         echo '<section class="section6">';
             echo '<div class="sectionblock">';
@@ -134,7 +152,7 @@ function setBlocks($blocks){
         echo  '</section>';
     };
 
-// Section 7
+// Section 5
 function setWork($ourWork, $slidePic){
     echo '<section class="section7">';
       echo '<div class="our-work">
@@ -190,8 +208,7 @@ function setWork($ourWork, $slidePic){
 //   };
 // 
 
-// Section 8
-
+// Section 6
 function setWhy($whyUs, $reasons){
   echo '<section class="section8">';
     echo '<div class="why-us">';
@@ -221,8 +238,7 @@ function setWhy($whyUs, $reasons){
 
 
 
-// Section 9
-
+// Section 7
 function setClient($clientSay){
   echo '<section class="say">';
     echo '<div class="what-they-say">';
@@ -253,14 +269,52 @@ function setClient($clientSay){
       echo '<img class="side-image image-right" src='.$clientSay['image2'].' alt="half2">';
     echo '</div>';
   echo'</section>';
+  }
+
+ 
+
+// <!-- Section 8 -->
+
+
+function intouch($getInTouch, $infos){
+  echo '<section class="contact-intouch">';
+    echo '<div class="contact-getintouch">';
+      echo '<div class="intouch">';
+        echo '<div class="intouchup">';
+          echo '<h1 class="touchup">'.$getInTouch['touch'].'</h1>';
+          echo '<hr class="intouch-hr">';
+          echo '<p class="intouch-p">'.$getInTouch['text'].'';
+          echo '</p>';
+        echo '</div>';
+        echo '<div class="intouch-info">';
+            foreach($infos as $data){
+          echo '<div class="'.$data['class'].'">';
+            echo '<img class="pin" src='.$data['image'].' alt="map icon" />';
+            echo '<div class="office">';
+             echo '<h3>'.$data['description'].'</h3>';
+              echo '<p>'.$data['info'].'</p>';        
+            echo '</div>';
+          echo '</div>';
+          };
+        echo '</div>';    
+      echo '</div>'; 
+      echo '<div class="form">';
+        echo '<div class="form-container">';
+          echo '<form class="contact-form">
+                  <label for="name">YOUR NAME</label>
+                  <input type="text" id="name" name="name" placeholder="" />
+
+                  <label for="email">YOUR EMAIL</label>
+                  <input type="email" id="email" name="email" placeholder="" />
+
+                  <label for="message">YOUR MESSAGE</label>
+                  <textarea id="message" name="message" placeholder=""></textarea>
+
+                  <button type="submit">SEND MESSAGE</button>';
+          echo '</form>';
+        echo '</div>';
+      echo '</div>';       
+    echo '</div>';              
+  echo '</section> ';
 }
 ?>
-        
-                  
-                  
-              
-                      
-          
-          
-
-          

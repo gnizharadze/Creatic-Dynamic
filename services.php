@@ -24,19 +24,17 @@
     <!-- Header -->
       <?php 
         setHeader($headerData);
-      ?>
+
       
-    <!-- Section 5 -->
-     <?php
+    //  Section 5
       setServices($services, $boxes);
 
-    //  Section 6
-     
-      setBlocks($blocks);
-     ?>
 
-     <!-- Footer -->
-     <?php
+    //  Section 6
+      setBlocks($blocks);
+
+
+    // Footer
         setFooter();
       ?>
   </body>
