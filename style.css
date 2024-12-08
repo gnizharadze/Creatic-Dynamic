@@ -7,17 +7,25 @@
 }
 
 body {
-  max-width: 1920px;
-  margin: 0 auto;
   background-color: #000000;
   font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 282px;
 }
 
 /* Header  */
 
 .header {
-  max-width: 1420px;
-  margin: 0 auto;
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -55,6 +63,7 @@ body {
   background-position: calc(100% + 120px) center;
   background-repeat: no-repeat;
   background-size: 1000px;
+  margin-top: 57px;
 }
 
 .texts {
@@ -196,11 +205,6 @@ h2 span {
 }
 
 /* Section 3 */
-.section5 {
-  max-width: 1290px;
-  margin: 0 auto;
-}
-
 .services {
   display: flex;
   align-items: center;
@@ -329,7 +333,7 @@ hr {
 }
 
 .blocks {
-  padding: 75px 0;
+  padding: 75px 282px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -525,10 +529,13 @@ hr {
 .what-they-say {
   display: flex;
   margin-bottom: 134px;
+  padding: 0;
+  gap: 101px;
+  justify-content: center;
 }
 
 .clients-say {
-  max-width: 751px;
+  /* max-width: 751px; */
   margin: 0 auto;
 }
 
@@ -743,6 +750,16 @@ hr {
   background: #357ab8;
 }
 
+.response {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  margin-top: 100px;
+  height: 50vh;
+}
+
 /* Footer  */
 .footer {
   display: flex;
@@ -753,6 +770,7 @@ hr {
   max-width: 740px;
   margin: 0 auto;
   margin-top: 129px;
+  padding: 0;
 }
 
 .line1 {
@@ -804,17 +822,31 @@ hr {
 
   .what-they-say {
     flex-wrap: wrap;
+    gap: 0;
   }
 
   .clients-say {
     order: 1;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .side-image {
     order: 2;
     width: 50%;
     height: auto;
+  }
+}
+
+@media screen and (min-width: 1500px) and (max-width: 1899px) {
+  .clients-say {
+    width: 100%;
+  }
+
+  .what-they-say img {
+    width: 40%;
   }
 }
 

@@ -7,7 +7,7 @@ include('data.php');
 function setHeader($headerData){
 
   echo '<header>';
-    echo '<div class="header">';
+    echo '<div class="header container">';
 
         echo '<div class="logo">';
           echo '<a href="#"><img src="./Image/LOGO.png" alt=""></a>';
@@ -30,7 +30,7 @@ function setHeader($headerData){
 
 function firstSection(){
   echo '<section>
-        <div class="first_section">
+        <div class="first_section container">
             <div class="texts">
                 <p id="p1">WELCOME TO CREATIC</p>
                 <h2 class="welcome-h2">WE ARE <span>CREATIVE</span> DESIGN AGENCY</h2>
@@ -51,10 +51,12 @@ function firstSection(){
 
 
 function secondsection($aboutData){
-  echo '<section class="section2">';
+  echo '<section class="section2 container">';
     echo '<div class="about-us">';
-      echo '<img class="gradient" src='.$aboutData['gradient'].' alt="gradient">';
-      echo '<img class="robot" src='.$aboutData['image'].' alt="About">';
+      echo '<div class="gradient">';
+        echo '<img src='.$aboutData['gradient'].' alt="gradient">';
+        echo '<img class="robot" src='.$aboutData['image'].' alt="About">';
+      echo '</div>';
       echo '<div class="aboutpart">';
         echo '<h2 class="about">'.$aboutData['about'].'</h2>';
         echo '<h1 class="about-title">'.$aboutData['about-title'].'</h1>';
@@ -70,7 +72,7 @@ function secondsection($aboutData){
 // Footer
 function setFooter(){
   echo '<footer>
-        <div class="footer">
+        <div class="footer container">
             <div class="logo">
                 <a href="#"><img src="./Image/LOGO.png" alt=""></a>
             </div>
@@ -109,7 +111,7 @@ function setFooter(){
 
 // Section 3
 function setServices($services, $boxes){
-      echo '<section class="section5">';
+      echo '<section class="section5 container">';
           echo '<div class="services">';
                 echo '<div class="innovation">
                         <h2 class="topic">'.$services['topic'].'</h2>
@@ -137,7 +139,7 @@ function setServices($services, $boxes){
 
 // Section 4
 function setBlocks($blocks){
-        echo '<section class="section6">';
+        echo '<section class="section6 container">';
             echo '<div class="sectionblock">';
                 echo '<div class="blocks">';
                     foreach ($blocks as $block){
@@ -154,7 +156,7 @@ function setBlocks($blocks){
 
 // Section 5
 function setWork($ourWork, $slidePic){
-    echo '<section class="section7">';
+    echo '<section class="section7 container">';
       echo '<div class="our-work">
         <h1 class="title">ENJOY OUR <span>LATEST</span> PROJECTS</h1>';
         echo '<div class="work-line">
@@ -210,7 +212,7 @@ function setWork($ourWork, $slidePic){
 
 // Section 6
 function setWhy($whyUs, $reasons){
-  echo '<section class="section8">';
+  echo '<section class="section8 container">';
     echo '<div class="why-us">';
       echo '<p class="why-title">'.$whyUs['title'].'</p>';
       echo '<hr class="why-hr">';
@@ -240,8 +242,8 @@ function setWhy($whyUs, $reasons){
 
 // Section 7
 function setClient($clientSay){
-  echo '<section class="say">';
-    echo '<div class="what-they-say">';
+  echo '<section class="say ">';
+    echo '<div class="what-they-say container">';
       echo '<img class="side-image image-left" src='.$clientSay['image1'].' alt="half1">';
         echo '<div class="clients-say">';
           echo '<div class="client-content">';
@@ -277,7 +279,7 @@ function setClient($clientSay){
 
 
 function intouch($getInTouch, $infos){
-  echo '<section class="contact-intouch">';
+  echo '<section class="contact-intouch container">';
     echo '<div class="contact-getintouch">';
       echo '<div class="intouch">';
         echo '<div class="intouchup">';
@@ -300,18 +302,18 @@ function intouch($getInTouch, $infos){
       echo '</div>'; 
       echo '<div class="form">';
         echo '<div class="form-container">';
-          echo '<form class="contact-form">
-                  <label for="name">YOUR NAME</label>
-                  <input type="text" id="name" name="name" placeholder="" />
-
-                  <label for="email">YOUR EMAIL</label>
-                  <input type="email" id="email" name="email" placeholder="" />
-
-                  <label for="message">YOUR MESSAGE</label>
-                  <textarea id="message" name="message" placeholder=""></textarea>
-
-                  <button type="submit">SEND MESSAGE</button>';
-          echo '</form>';
+          echo '<form class="contact-form" action="./contactForm.php" method="POST">
+                    <label for="name">YOUR NAME</label>
+                    <input type="text" id="name" name="name" placeholder="" />
+                
+                    <label for="email">YOUR EMAIL</label>
+                    <input type="email" id="email" name="email" placeholder="" />
+                
+                    <label for="message">YOUR MESSAGE</label>
+                    <textarea id="message" name="message" placeholder=""></textarea>
+                
+                    <button type="submit">SEND MESSAGE</button>';
+            echo '</form>';
         echo '</div>';
       echo '</div>';       
     echo '</div>';              
