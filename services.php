@@ -35,7 +35,7 @@
 
 
     // Footer
-        setFooter();
+      setFooter($footerMenuData, $socialMediaData);
       ?>
   </body>
 </html>

@@ -36,6 +36,7 @@ body {
   display: flex;
   gap: 17px;
   align-items: center;
+  list-style: none;
 }
 
 .nav ul li a {
@@ -55,26 +56,130 @@ body {
   height: 92px;
 }
 
+/* Seachbar */
+/* General hidden class */
+.hidden {
+  display: none !important;
+}
+
+/* Search bar within the header */
+.header .search-bar {
+  position: absolute;
+  top: 10%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  background: #6d95fc;
+  box-shadow: 0 4px 6px rgba(126, 48, 48, 0.1);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  border-radius: 4px;
+  transform: translateY(-20px); /* Optional: Slide it in */
+  pointer-events: none; /* Prevent interaction when hidden */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.header .search-bar.active {
+  opacity: 1;
+  transform: translateY(0); /* Reset position */
+  pointer-events: all; /* Allow interaction */
+}
+
+/* Input styling */
+.header .search-input {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 16px;
+}
+
+/* Close button */
+.header .close-search {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-weight: bold;
+}
+
+/* Search icon styling */
+.nav ul li a img,
+.sidebar ul li a img {
+  cursor: pointer;
+}
+
+/* Sidebar */
+
+.sidebar {
+  padding: 0 20px;
+}
+
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style: none;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.hamburger-menu-icon {
+  display: inline-block;
+  right: 10px;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.sidebar-nav {
+  color: white;
+  font-family: "Poppins";
+  font-size: 21px;
+  padding: 10px 18px;
+  transition: 0.2s;
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  left: -300px;
+  top: 0;
+  padding: 50px 10px;
+  transition: all 300ms;
+}
+
+#menu {
+  display: none;
+}
+
+#menu:checked ~ .sidebar-nav {
+  left: 0;
+}
+
 /* Section 1 */
 
 .first_section {
   display: flex;
-  background-image: url(./Image/beautiful-woman-with-big-jewel\ 1.png);
-  background-position: calc(100% + 120px) center;
-  background-repeat: no-repeat;
-  background-size: 1000px;
   margin-top: 57px;
+  padding: 0;
+  position: relative;
+  margin-bottom: 183px;
+  margin-right: 310px;
 }
 
 .texts {
   color: white;
   margin-top: 178px;
-  width: 819px;
-  height: 524px;
-  margin-left: 217px;
+  z-index: 2;
 }
 
-.welcome-h2 {
+.welcome-h1 {
   font-family: "Poppins";
   font-size: 80px;
   font-weight: 700;
@@ -82,13 +187,14 @@ body {
   letter-spacing: 0.015em;
   text-align: left;
   margin-bottom: 43px;
+  max-width: 820px;
 }
 
-h2 span {
+h1 span {
   color: #6d95fc;
 }
 
-#p1 {
+.welcometext {
   color: #6d95fc;
   font-family: "Poppins";
   font-size: 21px;
@@ -108,11 +214,13 @@ h2 span {
   margin-top: 43px;
 }
 
-.texts p {
+#p2 {
   font-family: "Poppins";
-  font-weight: 21px;
-  max-width: 550px;
-  width: 100%;
+  font-size: 21px;
+  font-weight: 300;
+  line-height: 31.5px;
+  text-align: left;
+  max-width: 700px;
 }
 
 .texts a {
@@ -133,6 +241,13 @@ h2 span {
   border: 3px solid transparent;
 }
 
+.womanimage img {
+  position: absolute;
+  left: 310px;
+  z-index: 1;
+  margin-top: 57px;
+}
+
 /* Section 2 */
 
 .about-us {
@@ -145,20 +260,18 @@ h2 span {
   margin-top: 134px;
 }
 
+.about-us img {
+  background: linear-gradient(
+    90deg,
+    #6d95fc -127.55%,
+    rgba(21, 21, 21, 0.35) 51%
+  );
+}
+
 .aboutpart {
   display: flex;
   flex-direction: column;
   width: 708px;
-}
-
-.gradient {
-  position: relative;
-  right: 170px;
-}
-
-.robot {
-  position: absolute;
-  left: 50px;
 }
 
 .about {
@@ -321,6 +434,10 @@ hr {
 
 /* Section 4 */
 
+.section4 {
+  padding: 0;
+}
+
 .sectionblock {
   max-width: 1920px;
   margin: 0 auto;
@@ -357,7 +474,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   max-width: 1920px;
   margin-top: 150px;
 }
@@ -384,7 +501,7 @@ hr {
 }
 
 .rectangle {
-  max-width: 2142px;
+  display: flex;
   margin: 0 auto;
 }
 
@@ -816,6 +933,43 @@ hr {
 }
 
 @media screen and (max-width: 1900px) {
+  .header {
+    padding: 0;
+  }
+
+  .first_section {
+    flex-direction: column;
+    margin-right: 0;
+  }
+
+  .womanimage img {
+    position: static;
+  }
+
+  .texts {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .welcome-h1 {
+    text-align: center;
+  }
+
+  .about-us {
+    flex-direction: column;
+  }
+
+  .gradient {
+    left: 0px;
+  }
+
+  .gradient img:first-child {
+    rotate: 90deg;
+  }
+
   .picture-slide {
     flex-direction: column;
   }
@@ -838,38 +992,6 @@ hr {
     width: 50%;
     height: auto;
   }
-}
-
-@media screen and (min-width: 1500px) and (max-width: 1899px) {
-  .clients-say {
-    width: 100%;
-  }
-
-  .what-they-say img {
-    width: 40%;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-  .blocks {
-    gap: 40px;
-  }
-  .services {
-    flex-direction: column;
-  }
-
-  .innovation {
-    align-items: center;
-  }
-  .topic,
-  .title,
-  .text {
-    text-align: center;
-  }
-
-  .picture-slide img {
-    width: 80%;
-  }
 
   .why-us {
     justify-content: center;
@@ -885,20 +1007,128 @@ hr {
   .why-left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
 
   .why-experience {
     text-align: center;
   }
 
+  .blocks {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .section3 {
+    padding: 0 100px;
+  }
+
+  .contact-intouch {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .contact-getintouch {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .services {
+    flex-direction: column;
+  }
+
+  .innovation {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .hamburger-menu {
+    display: flex;
+    justify-content: end;
+  }
+  .nav ul {
+    display: none;
+  }
+
+  .topic,
+  .title,
+  .text {
+    text-align: center;
+  }
+
+  .why-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .right-text {
-    width: 700px;
+    width: 600px;
   }
 
   .why-right ul {
     text-align: center;
+  }
+
+  .womanimage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .womanimage img {
+    width: 50%;
+  }
+
+  .work-text {
+    text-align: center;
+  }
+
+  .about-us img {
+    width: 500px;
+  }
+
+  .sidebar-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 20px;
+    list-style: none;
+  }
+
+  .sidebar-ul li a:hover {
+    color: #6d95fc;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .picture-slide img {
+    width: 500px;
+  }
+
+  .aboutpart,
+  .about-title {
+    width: 590px;
+  }
+
+  .footer_menu ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+  }
+
+  .blocks {
+    gap: 30px;
   }
 }
 
@@ -911,5 +1141,19 @@ hr {
 
   .box img {
     padding: 14px 30px;
+  }
+
+  .aboutpart,
+  .about-title,
+  .about-text,
+  .right-text,
+  #p2,
+  .footer {
+    width: 590px;
+    padding: 0 5px;
+  }
+
+  .why-experience {
+    font-size: 35px;
   }
 }

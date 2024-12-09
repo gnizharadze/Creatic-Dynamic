@@ -29,7 +29,7 @@
       intouch($getInTouch, $infos);
 
     // Footer
-      setFooter();
+      setFooter($footerMenuData, $socialMediaData);
     ?>
         
   </body>

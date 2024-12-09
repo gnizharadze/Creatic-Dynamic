@@ -9,54 +9,76 @@ function setHeader($headerData){
   echo '<header>';
     echo '<div class="header container">';
 
+        // Logo Section
         echo '<div class="logo">';
-          echo '<a href="#"><img src="./Image/LOGO.png" alt=""></a>';
-        echo '</div>';
+            echo '<a href="./index.php"><img src="./Image/LOGO.png" alt="Logo"></a>';
+        echo '</div>'; // End of Logo Section
 
+        // Navigation Section
         echo '<div class="nav">';
-           echo '<ul type="none">';
-              foreach($headerData as $data){
-                echo '<li><a href="'.$data['link'].'">'. $data['page'] .'</a></li>';
-              };
-              echo '<a href="#"><img src="./Image/magnify.png" alt=""></a>';
-           echo ' </ul>';
-        echo '</div>';
+            echo '<ul>';
+                foreach ($headerData as $data) {
+                    echo '<li><a href="' . $data['link'] . '">' . $data['page'] . '</a></li>';
+                }
+                // Search Icon
+                echo '<li><a href="#" class="search-icon"><img src="./Image/magnify.png" alt="Search"></a></li>';
+            echo '</ul>';
+        echo '</div>'; // End of Navigation Section
 
-    echo '</div>';
+        // Hamburger Menu Section
+        echo '<div class="hamburger-menu">';
+            echo '<input type="checkbox" id="menu">';
+            echo '<label for="menu">';
+                echo '<div class="hamburger-menu-icon">&#9776;</div>';
+            echo '</label>';
+            
+            echo '<div class="sidebar-nav">';
+                echo '<div class="sidebar">';
+                    echo '<ul>';
+                        foreach ($headerData as $data) {
+                            echo '<li><a href="' . $data['link'] . '">' . $data['page'] . '</a></li>';
+                        }
+                        // Sidebar Search Icon
+                        echo '<li><a href="#" class="search-icon"><img src="./Image/magnify.png" alt="Search"></a></li>';
+                    echo '</ul>';
+                echo '</div>'; // End of Sidebar
+            echo '</div>'; // End of Sidebar Navigation
+        echo '</div>'; // End of Hamburger Menu Section
+
+        // Search Bar Section
+        echo '<div class="search-bar hidden">';
+            echo '<input type="text" class="search-input" placeholder="Search...">';
+            echo '<button class="close-search">X</button>';
+        echo '</div>'; // End of Search Bar Section
+
+    echo '</div>'; // End of Header Container
   echo '</header>';
-}
-
+  }
 // section 1 
 
-function firstSection(){
-  echo '<section>
-        <div class="first_section container">
-            <div class="texts">
-                <p id="p1">WELCOME TO CREATIC</p>
-                <h2 class="welcome-h2">WE ARE <span>CREATIVE</span> DESIGN AGENCY</h2>
-                <div class="line"></div>
-                <p>Lorem ipsumNeque porro quisquam est qui dolorem ipsum 
-                    quia dolor sit amet, consectetur, adipisci velit Neque 
-                    porro elit Neque porro quis ipsum</p> 
-                <a href="#">GET IN TOUCH</a>
-            </div>
-        </div>
-    </section>';
+function firstSection($firstSectionData){
+  echo '<section>';
+    echo    '<div class="first_section container">';
+    echo       '<div class="womanimage">
+                  <img src="./Image/beautiful-woman-with-big-jewel 1.png" alt="Woman Picture">';
+    echo       '</div>';
+    echo       '<div class="texts">';
+    echo            '<h2 class="welcometext"> '. $firstSectionData ['welcomeText'] .'</h2>';
+    echo            '<h1 class="welcome-h1">'. $firstSectionData ['headline'] .'</h1>';
+    echo            '<div class="line"></div>';
+    echo            '<p id="p2">'. $firstSectionData ['description'] .'</p>';
+    echo            '<a href="#">'. $firstSectionData ['buttonText'] .'</a>';
+    echo       '</div>';
+
+    echo    '</div>';
+    echo '</section>';
   };
 
-
-// footer 
-
 // Section 2
-
-
 function secondsection($aboutData){
   echo '<section class="section2 container">';
     echo '<div class="about-us">';
-      echo '<div class="gradient">';
-        echo '<img src='.$aboutData['gradient'].' alt="gradient">';
-        echo '<img class="robot" src='.$aboutData['image'].' alt="About">';
-      echo '</div>';
+      echo '<img class="robot" src='.$aboutData['image'].' alt="About">';
       echo '<div class="aboutpart">';
         echo '<h2 class="about">'.$aboutData['about'].'</h2>';
         echo '<h1 class="about-title">'.$aboutData['about-title'].'</h1>';
@@ -67,51 +89,10 @@ function secondsection($aboutData){
       echo '</div>';
     echo '</div>';
   echo '</section>';
-}
-
-// Footer
-function setFooter(){
-  echo '<footer>
-        <div class="footer container">
-            <div class="logo">
-                <a href="#"><img src="./Image/LOGO.png" alt=""></a>
-            </div>
-            <div class="line1"></div>
-            <div class="footer_menu">
-                <ul type="none">
-                    <li><a href="#">Categories</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
-            <div class="footer_text">
-                <p>Lorem ipsum Neque porro quisquam est qui do lorem 
-                    ipsum quia dolor sit amet, 
-                     Neque porro elit NeDque </p>
-            </div>
-            <div class="soc_media">
-                <ul type="none">
-                    <li><a href="#"><img src="./Image/facebook.png" alt=""></a></li>
-                    <li><a href="#"><img src="./Image/instagram.png" alt=""></a></li>
-                    <li><a href="#"><img src="./Image/whatsapp.png" alt=""></a></li>
-                    <li><a href="#"><img src="./Image/linkedin.png" alt=""></a></li>
-                    <li><a href="#"><img src="./Image/pinterest.png" alt=""></a></li>
-                    <li><a href="#"><img src="./Image/twitter.png" alt=""></a></li>
-                </ul>
-            </div>
-            <p class="footerbottom">Copyright © 2003-2023 Creatic Agency All rights reserved.</p>
-        </div>
-    </footer>';
   }
-
-
-
 // Section 3
 function setServices($services, $boxes){
-      echo '<section class="section5 container">';
+      echo '<section class="section3 container">';
           echo '<div class="services">';
                 echo '<div class="innovation">
                         <h2 class="topic">'.$services['topic'].'</h2>
@@ -139,7 +120,7 @@ function setServices($services, $boxes){
 
 // Section 4
 function setBlocks($blocks){
-        echo '<section class="section6 container">';
+        echo '<section class="section4 container">';
             echo '<div class="sectionblock">';
                 echo '<div class="blocks">';
                     foreach ($blocks as $block){
@@ -155,7 +136,7 @@ function setBlocks($blocks){
     };
 
 // Section 5
-function setWork($ourWork, $slidePic){
+function setWork($ourWork, $slidePic){ 
     echo '<section class="section7 container">';
       echo '<div class="our-work">
         <h1 class="title">ENJOY OUR <span>LATEST</span> PROJECTS</h1>';
@@ -179,40 +160,9 @@ function setWork($ourWork, $slidePic){
     echo '</section>';
   };
 
-
-// Javascript function
-//   function setWork($ourWork, $slidePic){
-//       echo '<section class="section7">'; 
-//           echo '<div class="our-work">';
-//               echo '<h1 class="title">ENJOY OUR <span>LATEST</span> PROJECTS</h1>';
-//               echo '<div class="work-line">
-//                       <hr />
-//                       <h2 class="work-text">OUR WORK</h2>
-//                       <hr />';
-//               echo '</div>';
-//               // Add a wrapper for slides
-//               echo '<div class="picture-slide">';
-//                   echo '<div class="carousel-container">';
-//                       echo '<div class="carousel-slide">';
-//                           echo '<img src="'.$slidePic['url1'].'" alt="slidepic1" />';
-//                           echo '<img src="'.$slidePic['url2'].'" alt="slidepic2" />';
-//                           echo '<img src="'.$slidePic['url3'].'" alt="slidepic3" />';
-//                       echo '</div>';
-//                   echo '</div>';
-//                   echo '<div class="rectangle">';
-//                       echo '<span class="dot active" onclick="changeSlide(0)"><img src="./Image/Rectangle.png" alt="cube1" /></span>';
-//                       echo '<span class="dot" onclick="changeSlide(1)"><img src="./Image/Rectangle.png" alt="cube1" /></span>';
-//                       echo '<span class="dot" onclick="changeSlide(2)"><img src="./Image/Rectangle.png" alt="cube1" /></span>';
-//                   echo '</div>';
-//               echo '</div>';
-//           echo '</div>';
-//       echo '</section>';
-//   };
-// 
-
 // Section 6
 function setWhy($whyUs, $reasons){
-  echo '<section class="section8 container">';
+  echo '<section class="section6 container">';
     echo '<div class="why-us">';
       echo '<p class="why-title">'.$whyUs['title'].'</p>';
       echo '<hr class="why-hr">';
@@ -239,10 +189,9 @@ function setWhy($whyUs, $reasons){
   };
 
 
-
 // Section 7
 function setClient($clientSay){
-  echo '<section class="say ">';
+  echo '<section class="say">';
     echo '<div class="what-they-say container">';
       echo '<img class="side-image image-left" src='.$clientSay['image1'].' alt="half1">';
         echo '<div class="clients-say">';
@@ -273,11 +222,8 @@ function setClient($clientSay){
   echo'</section>';
   }
 
- 
 
 // <!-- Section 8 -->
-
-
 function intouch($getInTouch, $infos){
   echo '<section class="contact-intouch container">';
     echo '<div class="contact-getintouch">';
@@ -318,5 +264,36 @@ function intouch($getInTouch, $infos){
       echo '</div>';       
     echo '</div>';              
   echo '</section> ';
-}
+  }
+
+// Footer
+function setFooter($footerMenuData, $socialMediaData) {
+      echo '<footer>';
+        echo '<div class="footer container">';
+          echo '<div class="logo">
+                  <a href="#"><img src="./Image/LOGO.png" alt=""></a>';
+          echo '</div>';
+          echo '<div class="line1"></div>';
+          echo '<div class="footer_menu">';
+            echo '<ul type="none">';
+              foreach ($footerMenuData as $menuItem) {
+                  echo '<li><a href="' . $menuItem['link'] . '">' . $menuItem['title'] . '</a></li>';
+              }
+            echo '</ul>';
+          echo '</div>';
+          echo '<div class="footer_text">';
+              echo '<p>Lorem ipsum Neque porro quisquam est qui do lorem ipsum quia dolor sit amet, Neque porro elit NeDque</p>';
+          echo '</div>';
+          echo '<div class="soc_media">';
+              echo '<ul type="none">';
+              foreach ($socialMediaData as $platform => $icon) {
+                  echo '<li><a href="#"><img src="' . $icon . '" alt="' . $platform . '"></a></li>';
+                }
+              echo '</ul>';
+          echo '</div>';
+          echo '<p class="footerbottom">Copyright © 2003-2023 Creatic Agency All rights reserved.</p>';
+        echo '</div>';
+      echo '</footer>';
+  };
+
 ?>

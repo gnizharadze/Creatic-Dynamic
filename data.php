@@ -26,10 +26,17 @@ $headerData = [
         'page' => 'Contact Us',
         'link' => 'contact-us.php'
     ],
-];
-
+    ];
+// Section 1
+$firstSectionData = [
+    'welcomeText' => 'WELCOME TO CREATIC',
+    'headline' => 'WE ARE <span>CREATIVE</span> DESIGN AGENCY',
+    'description' => 'Lorem ipsumNeque porro quisquam est qui dolorem ipsum
+                      quia dolor sit amet, consectetur, adipisci velit Neque
+                      porro elit Neque porro quis ipsum',
+    'buttonText' => 'GET IN TOUCH'
+    ];
 // Section 2
-
 $aboutData = [
     'image' => "./Image/aboutimg.png",
     'gradient' => "./Image/abgrad.png",
@@ -39,8 +46,7 @@ $aboutData = [
     'text' => 'Lorem ipsumNeque porro quisquam est qui do lorem ipsum quia dolor sit amet,  Neque porro elit NeDque porro  Lorem ipsum Neque porro Neque porro 
       <br><br>Neque porro quisquam est qui do lorem ipsum quia dolor sit amet,  Lorem ipsum Neque quis ipsum',
     'button' => 'READ MORE'
-];
-
+    ];
 // Section 3
 $services = [
     'topic' => 'OUR SERVICES',
@@ -141,7 +147,6 @@ $clientSay = [
     ];
 
 // Section 8
-
 $getInTouch = [
     'touch' => 'GET IN <span>TOUCH</span>',
     'text' => 'Lorem ipsum Neque porro quisquam est qui do lorem ipsum quia dolor sit
@@ -167,4 +172,42 @@ $infos = [
         'description' => 'Mail Us',
         'info' => 'info@creaticagency.com'
     ]
+    ];
+
+
+// Footer
+$footerMenuData = [
+    [
+        'link' => 'index.php', 
+        'title' => 'Categories'
+    ],
+    [
+        'link' => 'about-us.php', 
+        'title' => 'About'
+    ],
+    [
+        'link' => 'services.php', 
+        'title' => 'Services'
+    ],
+    [
+        'link' => 'portfolio.php', 
+        'title' => 'Portfolio'
+    ],
+    [
+        'link' => 'pages.php', 
+        'title' => 'Pages'
+    ],
+    [
+        'link' => 'contact-us.php', 
+        'title' => 'Support'
+    ],
+    ];
+
+    $socialMediaData = [
+        'facebook' => './Image/facebook.png',
+        'instagram' => './Image/instagram.png',
+        'whatsapp' => './Image/whatsapp.png',
+        'linkedin' => './Image/linkedin.png',
+        'pinterest' => './Image/pinterest.png',
+        'twitter' => './Image/twitter.png'
     ];

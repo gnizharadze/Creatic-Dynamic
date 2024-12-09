@@ -18,7 +18,7 @@
     />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Creatic Creative Agency</title>
-    <script src="js/carousel.js" defer></script>
+    <script src="./script.js"></script>
   </head>
   <body>
     <!-- header  -->
@@ -26,7 +26,7 @@
       setHeader($headerData);
 
       // Section 1
-      firstSection();
+      firstSection($firstSectionData);
 
       // Section 2
       secondsection($aboutData);
@@ -38,10 +38,10 @@
       setBlocks($blocks);
 
       // Section 5
-        setWork($ourWork, $slidePic);
+      setWork($ourWork, $slidePic);
 
       // Section 6
-        setWhy($whyUs, $reasons);
+      setWhy($whyUs, $reasons);
 
       // Section 7
       setClient($clientSay);
@@ -50,7 +50,7 @@
       intouch($getInTouch, $infos);
 
       // Footer
-      setFooter();
+      setFooter($footerMenuData, $socialMediaData);
     ?>
         
   </body>

@@ -38,7 +38,7 @@
 
     <!-- Footer -->
     <?php
-      setFooter();
+      setFooter($footerMenuData, $socialMediaData);
     ?>
         
   </body>
