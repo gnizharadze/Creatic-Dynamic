@@ -49,6 +49,9 @@
       // Section 8
       intouch($getInTouch, $infos);
 
+      // // Support Section
+      // setSupport($supportData);
+
       // Footer
       setFooter($footerMenuData, $socialMediaData);
     ?>

@@ -174,6 +174,10 @@ $infos = [
     ]
     ];
 
+    $supportData = [
+        'characterImage' => './Image/aboutimg.png', 
+        'message' => 'Hello! How can I assist you today?',
+    ];
 
 // Footer
 $footerMenuData = [
@@ -198,7 +202,7 @@ $footerMenuData = [
         'title' => 'Pages'
     ],
     [
-        'link' => 'contact-us.php', 
+        'link' => 'support.php', 
         'title' => 'Support'
     ],
     ];

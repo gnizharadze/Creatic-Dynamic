@@ -266,6 +266,17 @@ function intouch($getInTouch, $infos){
   echo '</section> ';
   }
 
+  //support
+  function setSupport($supportData) {
+    echo '
+    <section id="support">
+        <div class="support-container">
+            <img class="support-character" src="' . htmlspecialchars($supportData['characterImage']) . '" alt="Support Character">
+            <p class="support-message">' . htmlspecialchars($supportData['message']) . '</p>
+        </div>
+    </section>';
+}
+
 // Footer
 function setFooter($footerMenuData, $socialMediaData) {
       echo '<footer>';
