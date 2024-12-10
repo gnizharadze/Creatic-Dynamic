@@ -8,50 +8,41 @@ function setHeader($headerData){
 
   echo '<header>';
     echo '<div class="header container">';
-
-        // Logo Section
         echo '<div class="logo">';
             echo '<a href="./index.php"><img src="./Image/LOGO.png" alt="Logo"></a>';
-        echo '</div>'; // End of Logo Section
-
-        // Navigation Section
+        echo '</div>';  
         echo '<div class="nav">';
             echo '<ul>';
                 foreach ($headerData as $data) {
                     echo '<li><a href="' . $data['link'] . '">' . $data['page'] . '</a></li>';
-                }
-                // Search Icon
+                }           
                 echo '<li><a href="#" class="search-icon"><img src="./Image/magnify.png" alt="Search"></a></li>';
             echo '</ul>';
-        echo '</div>'; // End of Navigation Section
-
-        // Hamburger Menu Section
+        echo '</div>';       
         echo '<div class="hamburger-menu">';
             echo '<input type="checkbox" id="menu">';
             echo '<label for="menu">';
                 echo '<div class="hamburger-menu-icon">&#9776;</div>';
-            echo '</label>';
-            
+            echo '</label>';        
             echo '<div class="sidebar-nav">';
                 echo '<div class="sidebar">';
                     echo '<ul>';
                         foreach ($headerData as $data) {
                             echo '<li><a href="' . $data['link'] . '">' . $data['page'] . '</a></li>';
                         }
-                        // Sidebar Search Icon
-                        echo '<li><a href="#" class="search-icon"><img src="./Image/magnify.png" alt="Search"></a></li>';
-                    echo '</ul>';
-                echo '</div>'; // End of Sidebar
-            echo '</div>'; // End of Sidebar Navigation
-        echo '</div>'; // End of Hamburger Menu Section
+        //                 // Sidebar Search Icon
+        //                 echo '<li><a href="#" class="search-icon"><img src="./Image/magnify.png" alt="Search"></a></li>';
+        //             echo '</ul>';
+        //         echo '</div>'; // End of Sidebar
+        //     echo '</div>'; // End of Sidebar Navigation
+        // echo '</div>'; // End of Hamburger Menu Section
 
-        // Search Bar Section
-        echo '<div class="search-bar hidden">';
-            echo '<input type="text" class="search-input" placeholder="Search...">';
-            echo '<button class="close-search">X</button>';
-        echo '</div>'; // End of Search Bar Section
-
-    echo '</div>'; // End of Header Container
+        // // Search Bar Section
+        // echo '<div class="search-bar hidden">';
+        //     echo '<input type="text" class="search-input" placeholder="Search...">';
+        //     echo '<button class="close-search">X</button>';
+        // echo '</div>'; // End of Search Bar Section
+    echo '</div>';
   echo '</header>';
   }
 // section 1 
