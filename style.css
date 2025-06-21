@@ -1147,3 +1147,9 @@ hr {
     font-size: 35px;
   }
 }
+
+@keyframes identifier {
+  0%{
+    animation-timing-function: ease-in;
+  }
+}
